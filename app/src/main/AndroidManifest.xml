@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LamNhom">
         <activity
+            android:name=".KQTimKiem"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
