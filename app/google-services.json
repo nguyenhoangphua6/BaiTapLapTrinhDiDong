@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "937184084981",
+    "project_id": "hotrocovid-e94d3",
+    "storage_bucket": "hotrocovid-e94d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937184084981:android:8629b4c45f7e0840ad56bc",
+        "android_client_info": {
+          "package_name": "com.midterm.lamnhom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937184084981-redq4rvhp1rqa49gvqvk0vodpe0s3b46.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTchWJDH6bILJCUiRihEWLdqnP19dVAVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937184084981-redq4rvhp1rqa49gvqvk0vodpe0s3b46.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
