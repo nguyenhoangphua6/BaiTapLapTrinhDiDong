@@ -3,6 +3,7 @@ package com.midterm.lamnhom;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -34,22 +35,7 @@ public class thongtinthongbao extends AppCompatActivity {
         cbnam = findViewById(R.id.cbnam);
         cbcamket = findViewById(R.id.cbcamket);
 
-        name = edname.getText().toString();
-        cccd= edcccd.getText().toString();
-        diachi=eddiachi.getText().toString();
-        sdt= edsdt.getText().toString();
-        if(cbnam.isChecked()){
-            gioitinh=true;
-        }
-        else {
-            gioitinh=false;
-        }
-        if(cbcamket.isChecked()){
-            camket=true;
-        }
-        else {
-            camket=false;
-        }
+
 
         //xong phan khai bao
         // phan lich su
@@ -57,15 +43,38 @@ public class thongtinthongbao extends AppCompatActivity {
         edthoigian= findViewById(R.id.edtime);
         edphuongtien = findViewById(R.id.edphuongtien);
 
-        diadiem = eddiadiem.getText().toString();
-        thoigian= edthoigian.getText().toString();
-        phuongtien=edphuongtien.getText().toString();
+
 
         //xong phan lich su
         Gui = findViewById(R.id.btngui);
         Gui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                name = edname.getText().toString();
+                cccd= edcccd.getText().toString();
+                diachi=eddiachi.getText().toString();
+                sdt= edsdt.getText().toString();
+                if(cbnam.isChecked()){
+                    gioitinh=true;
+                }
+                else {
+                    gioitinh=false;
+                }
+                if(cbcamket.isChecked()){
+                    camket=true;
+                }
+                else {
+                    camket=false;
+                }
+
+
+                diadiem = eddiadiem.getText().toString();
+                thoigian= edthoigian.getText().toString();
+                phuongtien=edphuongtien.getText().toString();
+
+                Log.d("DATA", name+" / " +gioitinh+" / " +cccd+" / " +diachi+" / " +camket+" / " +sdt);
+
                 writeNewKhaiBao(name,gioitinh,cccd,diachi,camket,sdt);
                 writeNewLichSu(cccd,diadiem,thoigian,phuongtien);
             }
