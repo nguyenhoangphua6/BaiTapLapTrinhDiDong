@@ -15,18 +15,20 @@
         android:theme="@style/Theme.LamNhom">
         <activity
             android:name=".thongtinthongbao"
-            android:exported="true" />
-        <activity
-            android:name=".KQTimKiem"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".KQTimKiem"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 

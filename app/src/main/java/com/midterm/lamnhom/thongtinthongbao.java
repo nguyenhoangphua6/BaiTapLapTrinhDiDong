@@ -75,7 +75,7 @@ public class thongtinthongbao extends AppCompatActivity {
     public void writeNewKhaiBao( String name, boolean sex, String cccd, String adress, boolean camKet,String sdt) {
         String key = "kb"+cccd;
         KhaiBao khaibao = new KhaiBao(name,sex,cccd,adress,camKet,sdt);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://hotrocovid-e94d3-default-rtdb.firebaseio.com/");
         DatabaseReference myRef = database.getReference().child(key);
         myRef.setValue(khaibao);
     }
@@ -83,7 +83,7 @@ public class thongtinthongbao extends AppCompatActivity {
     public void writeNewLichSu(String cccd, String diaDiem, String thoiGian, String phuongTien){
         String key = "ls"+cccd;
         LichSu lichSu = new LichSu(cccd, diaDiem,thoiGian,phuongTien);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://hotrocovid-e94d3-default-rtdb.firebaseio.com/");
         DatabaseReference myRef = database.getReference().child(key);
         myRef.setValue(lichSu);
     }

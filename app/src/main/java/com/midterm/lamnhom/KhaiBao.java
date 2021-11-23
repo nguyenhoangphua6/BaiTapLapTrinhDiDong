@@ -17,7 +17,7 @@ public class KhaiBao {
         this.cccd = cccd;
         this.adress = adress;
         this.camKet = camKet;
-        this.sdt = sdt
+        this.sdt = sdt;
     }
 
 
