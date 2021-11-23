@@ -11,7 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,134 +26,185 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginVertical="10dp"
-            android:layout_marginHorizontal="55dp">
+            >
 
             <Button
+                android:id="@+id/tv_vn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/vn_icon"
                 android:text="Việt Nam"
-                android:textColor="#ff0000"
-                android:backgroundTint="#ffc0cb"/>
+                android:textColor="@color/black"
+                android:backgroundTint="#bebebe"
+                android:layout_marginHorizontal="30dp"/>
             <Button
+                android:id="@+id/tv_world"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/world2_icon"
                 android:text="Thế giới"
-                android:textColor="#1e90ff"
-                android:backgroundTint="#bebebe"
-                android:layout_marginLeft="30dp"
-                android:layout_marginVertical="5dp"/>
+                android:textColor="@color/black"
+                android:backgroundTint="#bebebe" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="9"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp">
-
+            android:orientation="vertical">
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="3">
-                <TextView
-                    android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="9"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="34"
-                    android:background="#fffacd"
-                    android:gravity="center
-"               android:textStyle="bold"
-                    android:textColor="#ffd700"
-                    android:textSize="30sp"/>
-                <TextView
-                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="3"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp">
+                    <TextView
+                        android:id="@+id/tv_nhiem_benh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:background="#fffacd"
+                        android:gravity="center
+    "                   android:textStyle="bold"
+                        android:textColor="#fdd808"
+                        android:textSize="30sp"/>
+                    <TextView
+                        android:id="@+id/tv_nhiem_benh_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:background="#fffacd"
+                        android:gravity="center
+    "                   android:textStyle="bold"
+                        android:textColor="#fdd808"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nhiễm bệnh"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:background="#fffacd"/>
+                    <TextView
+                        android:id="@+id/tv_new_nhiem_benh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+ 0"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:background="#ffd700"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nhiễm bệnh"
-                    android:textColor="@color/black"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:background="#fffacd"/>
-                <TextView
-                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="3"
+                    android:paddingHorizontal="5dp">
+                    <TextView
+                        android:id="@+id/tv_tu_vong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:background="#ffb6c1"
+                        android:gravity="center
+    "                   android:textStyle="bold"
+                        android:textColor="#ff0000"
+                        android:textSize="30sp"/>
+                    <TextView
+                        android:id="@+id/tv_tu_vong_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:background="#ffb6c1"
+                        android:gravity="center
+    "                   android:textStyle="bold"
+                        android:textColor="#ff0000"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tử vong"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:background="#ffb6c1"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/tv_new_tu_vong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="+ 0"
+                        android:background="#ff0000"
+                        android:textSize="20sp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+ 1"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:background="#ffd700"/>
+                    android:orientation="vertical"
+                    android:layout_weight="3"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:id="@+id/tv_binh_phuc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:background="#8cfe60"
+                        android:gravity="center
+    "                   android:textStyle="bold"
+                        android:textColor="#008f02"
+                        android:textSize="30sp"/>
+                    <TextView
+                        android:id="@+id/tv_binh_phuc_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:background="#8cfe60"
+                        android:gravity="center
+    "                   android:textStyle="bold"
+                        android:textColor="#008f02"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bình phục"
+                        android:background="#8cfe60"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/tv_new_binh_phuc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+ 0"
+                        android:background="#008f02"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/tv_update"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="3"
-                android:layout_marginHorizontal="10dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:background="#ffb6c1"
-                    android:gravity="center
-"               android:textStyle="bold"
-                    android:textColor="#ffd700"
-                    android:textSize="30sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Tử vong"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:background="#ffb6c1"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="+ 0"
-                    android:background="#ff0000"
-                    android:textSize="20sp"
-                    android:gravity="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="3">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="34"
-                    android:background="#e0ffff"
-                    android:gravity="center
-"               android:textStyle="bold"
-                    android:textColor="#ffd700"
-                    android:textSize="30sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Bình phục"
-                    android:background="#e0ffff"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:gravity="center"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="+ 0"
-                    android:background="#0000ff"
-                    android:textSize="20sp"
-                    android:gravity="center"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
-
-
+                android:gravity="center"
+                android:text=""
+                android:textSize="20sp"/>
         </LinearLayout>
 
 
@@ -192,7 +242,7 @@
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/CCCD"/>
+                    android:src="@drawable/cccd"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -281,13 +331,13 @@
 
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Design by 404 Not Found Team"
-            android:gravity="center|bottom"
-            android:textSize="20sp"
-            android:textColor="@color/black"/>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="Design by 404 Not Found Team"-->
+<!--            android:gravity="center|bottom"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textColor="@color/black"/>-->
 
     </LinearLayout>
 
