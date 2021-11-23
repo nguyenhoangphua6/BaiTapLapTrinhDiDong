@@ -1,4 +1,4 @@
-package com.midterm.lamnhom;
+package com.midterm.lamnhom.model;
 
 public class LichSu {
     private String cccd;
@@ -6,11 +6,14 @@ public class LichSu {
     private String thoiGian;
     private String phuongTien;
 
-    public LichSu(String cccd, String diaDiem, String thoiGian, String phuongTien) {
+    public LichSu(String cccd, String diaDiem,  String phuongTien, String thoiGian) {
         this.cccd = cccd;
         this.diaDiem = diaDiem;
         this.thoiGian = thoiGian;
         this.phuongTien = phuongTien;
+    }
+
+    public LichSu() {
     }
 
     public String getCccd() {

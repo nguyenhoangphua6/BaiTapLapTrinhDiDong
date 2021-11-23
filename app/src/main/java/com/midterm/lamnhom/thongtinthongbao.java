@@ -11,6 +11,8 @@ import android.widget.EditText;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.midterm.lamnhom.model.KhaiBao;
+import com.midterm.lamnhom.model.LichSu;
 
 public class thongtinthongbao extends AppCompatActivity {
 
@@ -82,19 +84,32 @@ public class thongtinthongbao extends AppCompatActivity {
 
     }
     public void writeNewKhaiBao( String name, boolean sex, String cccd, String adress, boolean camKet,String sdt) {
-        String key = "kb"+cccd;
+/*        String key = "kb"+cccd;
         KhaiBao khaibao = new KhaiBao(name,sex,cccd,adress,camKet,sdt);
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://hotrocovid-e94d3-default-rtdb.firebaseio.com/");
         DatabaseReference myRef = database.getReference().child(key);
+        myRef.setValue(khaibao);*/
+        String key = "kb-"+cccd;
+        KhaiBao khaibao = new KhaiBao(name,sex,cccd,adress,camKet,sdt);
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://hotrocovid-e94d3-default-rtdb.firebaseio.com/");
+        DatabaseReference myRef = database.getReference("listkb").child(key);
         myRef.setValue(khaibao);
+
     }
 
     public void writeNewLichSu(String cccd, String diaDiem, String thoiGian, String phuongTien){
-        String key = "ls"+cccd;
+/*        String key = "ls"+cccd;
         LichSu lichSu = new LichSu(cccd, diaDiem,thoiGian,phuongTien);
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://hotrocovid-e94d3-default-rtdb.firebaseio.com/");
         DatabaseReference myRef = database.getReference().child(key);
+        myRef.setValue(lichSu);*/
+
+        String key = "ls-"+cccd;
+        LichSu lichSu = new LichSu(cccd, diaDiem,thoiGian,phuongTien);
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://hotrocovid-e94d3-default-rtdb.firebaseio.com/");
+        DatabaseReference myRef = database.getReference("listls").child(key);
         myRef.setValue(lichSu);
+
     }
 
 }

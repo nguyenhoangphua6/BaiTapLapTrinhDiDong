@@ -8,10 +8,11 @@
     app:cardCornerRadius="8dp"
     android:layout_marginTop="10dp"
     android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
 
-    android:layout_marginStart="16dp"
-    android:elevation="10dp"
-    app:cardElevation="10dp" >
+
+    android:layout_marginRight="10dp"
+    >
 
 
 
@@ -23,20 +24,20 @@
 
 
         <TextView
-            android:id="@+id/tv_name"
+            android:id="@+id/tv_CCCD"
             android:layout_width="117dp"
             android:layout_height="match_parent"
             android:gravity="center"
             android:hint="0000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintHorizontal_bias="0.059"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"></TextView>
 
         <TextView
-            android:id="@+id/tv_sdt"
+            android:id="@+id/tv_DiaDiem"
             android:layout_width="241dp"
             android:layout_height="49dp"
             android:layout_weight="1"
@@ -50,7 +51,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/tv_diachi"
+            android:id="@+id/tv_Time"
             android:layout_width="238dp"
             android:layout_height="46dp"
             android:layout_weight="1"

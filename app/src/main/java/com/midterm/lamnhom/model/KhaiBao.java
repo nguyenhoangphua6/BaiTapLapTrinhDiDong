@@ -1,4 +1,4 @@
-package com.midterm.lamnhom;
+package com.midterm.lamnhom.model;
 
 public class KhaiBao {
 
@@ -9,6 +9,8 @@ public class KhaiBao {
     private boolean camKet;
     private String sdt;
 
+
+    public KhaiBao(){};
 
     public KhaiBao( String name, boolean sex, String cccd, String adress, boolean camKet,String sdt) {
 
