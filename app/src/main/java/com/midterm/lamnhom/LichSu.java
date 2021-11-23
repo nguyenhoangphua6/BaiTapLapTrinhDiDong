@@ -1,24 +1,24 @@
 package com.midterm.lamnhom;
 
 public class LichSu {
-    private int id;
+    private String cccd;
     private String diaDiem;
     private String thoiGian;
     private String phuongTien;
 
-    public LichSu(int id, String diaDiem, String thoiGian, String phuongTien) {
-        this.id = id;
+    public LichSu(String cccd, String diaDiem, String thoiGian, String phuongTien) {
+        this.cccd = cccd;
         this.diaDiem = diaDiem;
         this.thoiGian = thoiGian;
         this.phuongTien = phuongTien;
     }
 
-    public int getId() {
-        return id;
+    public String getCccd() {
+        return cccd;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCccd(String cccd) {
+        this.cccd = cccd;
     }
 
     public String getDiaDiem() {

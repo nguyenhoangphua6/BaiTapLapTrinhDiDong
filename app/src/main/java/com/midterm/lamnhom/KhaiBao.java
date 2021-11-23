@@ -1,29 +1,32 @@
 package com.midterm.lamnhom;
 
 public class KhaiBao {
-    private int id;
+
     private String name;
     private boolean sex;
     private String cccd;
     private String adress;
     private boolean camKet;
+    private String sdt;
 
 
-    public KhaiBao(int id, String name, boolean sex, String cccd, String adress, boolean camKet) {
-        this.id = id;
+    public KhaiBao( String name, boolean sex, String cccd, String adress, boolean camKet,String sdt) {
+
         this.name = name;
         this.sex = sex;
         this.cccd = cccd;
         this.adress = adress;
         this.camKet = camKet;
+        this.sdt = sdt
     }
 
-    public int getId() {
-        return id;
+
+    public String getSdt() {
+        return sdt;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setSdt(String sdt) {
+        this.sdt = sdt;
     }
 
     public String getName() {
