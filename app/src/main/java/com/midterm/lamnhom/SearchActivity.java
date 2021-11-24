@@ -54,7 +54,7 @@ public class SearchActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-         getAllListLichSuRealTimeDB();
+        getAllListLichSuRealTimeDB();
 
 
     }
@@ -64,7 +64,7 @@ public class SearchActivity extends AppCompatActivity {
 
 
         database = FirebaseDatabase.getInstance();
-       // listLichsu.clear();
+        listLichsu.clear();
 
         DatabaseReference  exe = database.getReference("listls");
 
