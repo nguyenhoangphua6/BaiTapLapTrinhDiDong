@@ -39,13 +39,15 @@ public class SearchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_search);
         View view = binding.getRoot();
         setContentView(view);
 
 
         listLichsu = new ArrayList<LichSu>();
-        adapter = new AdapterHis(listLichsu, this);
+        adapter = new AdapterHis(listLichsu, getApplicationContext());
 
 
         recyclerView = binding.rvLichSu;
@@ -62,8 +64,7 @@ public class SearchActivity extends AppCompatActivity {
 
 
         database = FirebaseDatabase.getInstance();
-
-        listLichsu.clear();
+       // listLichsu.clear();
 
         DatabaseReference  exe = database.getReference("listls");
 
@@ -72,15 +73,13 @@ public class SearchActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for( DataSnapshot dataSnapshot :  snapshot.getChildren() ){
-                   String t = dataSnapshot.getKey();
-                     LichSu kb = new LichSu();
+                      String t = dataSnapshot.getKey();
+                      LichSu kb = new LichSu();
                       kb = dataSnapshot.getValue( LichSu.class) ;
-
-                    listLichsu.add(kb);
-
-
-                }
+                      listLichsu.add(kb);
                       adapter.notifyDataSetChanged();
+                }
+
             }
 
             @Override

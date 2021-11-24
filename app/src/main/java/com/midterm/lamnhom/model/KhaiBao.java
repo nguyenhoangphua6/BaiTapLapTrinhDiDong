@@ -1,6 +1,8 @@
 package com.midterm.lamnhom.model;
 
-public class KhaiBao {
+import java.io.Serializable;
+
+public class KhaiBao implements Serializable {
 
     private String name;
     private boolean sex;

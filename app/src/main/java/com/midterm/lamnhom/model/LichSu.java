@@ -1,6 +1,10 @@
 package com.midterm.lamnhom.model;
 
-public class LichSu {
+import androidx.annotation.NonNull;
+
+import java.io.Serializable;
+
+public class LichSu implements Serializable {
     private String cccd;
     private String diaDiem;
     private String thoiGian;
@@ -11,6 +15,14 @@ public class LichSu {
         this.diaDiem = diaDiem;
         this.thoiGian = thoiGian;
         this.phuongTien = phuongTien;
+    }
+
+
+    @NonNull
+    @Override
+    public String toString() {
+        String s = "Thời gian: " +thoiGian + ";\n" + "Địa điểm: " + diaDiem + ";\n" + "Phương tiện: " + phuongTien + ".";
+        return s;
     }
 
     public LichSu() {

@@ -2,6 +2,8 @@ package com.midterm.lamnhom.model;
 
 import android.content.Context;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,26 +12,29 @@ import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.midterm.lamnhom.KQTimKiem;
 import com.midterm.lamnhom.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 
 
-public class AdapterHis extends RecyclerView.Adapter< AdapterHis.ViewHolder> implements Filterable {
+public class AdapterHis extends RecyclerView.Adapter< AdapterHis.ViewHolder> implements Filterable, Serializable {
 
     ArrayList<LichSu> listlichsu;
     ArrayList<LichSu> listSearch;
     Context context;
 
-    public AdapterHis(ArrayList<LichSu> listlichsu, Context context) {
-        this.listlichsu = listlichsu;
+    public AdapterHis(ArrayList<LichSu> listls, Context context) {
+        this.listlichsu = listls;
         this.context = context;
-        this.listSearch=listlichsu;
+        this.listSearch= listls;
     }
 
 
@@ -44,11 +49,31 @@ public class AdapterHis extends RecyclerView.Adapter< AdapterHis.ViewHolder> imp
     @Override
     public void onBindViewHolder(@NonNull AdapterHis.ViewHolder holder, int position) {
 
-        LichSu hs = listlichsu.get(position);
+        LichSu his  = new LichSu();
 
-        holder.cccd.setText(hs.getCccd());
-        holder.diachi.setText( hs.getDiaDiem());
-        holder.time.setText( hs.getThoiGian());
+        his =   listlichsu.get(position);
+
+        holder.cccd.setText(his.getCccd());
+        holder.diachi.setText( his.getDiaDiem());
+        holder.time.setText( his.getThoiGian());
+
+        LichSu finalHis = his;
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                OnClicKGotoDetail(finalHis);
+
+            }
+        });
+
+    }
+
+    private void   OnClicKGotoDetail( LichSu his){
+
+        Intent intent= new Intent(context, KQTimKiem.class);
+        intent.putExtra("his", his);    // Không được thay đỏi dòng nay
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
 
     }
 
@@ -65,7 +90,7 @@ public class AdapterHis extends RecyclerView.Adapter< AdapterHis.ViewHolder> imp
             @Override
             protected FilterResults performFiltering(CharSequence charSequence) {
                 String charString = charSequence.toString();
-                List<LichSu> listFiltered=new ArrayList<LichSu>();
+                List<LichSu> listFiltered= new ArrayList<LichSu>();
                 if(charString.isEmpty())
                 {
                     listFiltered.addAll(listSearch);
@@ -95,12 +120,14 @@ public class AdapterHis extends RecyclerView.Adapter< AdapterHis.ViewHolder> imp
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView cccd, time, diachi;
+        private ConstraintLayout layout;
 
         public ViewHolder(View view) {
             super(view);
             cccd = view.findViewById( R.id.tv_CCCD);
             diachi = view.findViewById(R.id.tv_DiaDiem);
             time = view.findViewById(R.id.tv_Time);
+            layout = view.findViewById((R.id.layout_click));
 
 
         }

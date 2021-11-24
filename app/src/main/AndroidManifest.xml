@@ -13,7 +13,7 @@
         android:theme="@style/Theme.LamNhom"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".SearchActivity"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".thongtinthongbao"
@@ -28,7 +28,7 @@
             android:name=".KQTimKiem"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SearchActivity"
             android:exported="true"></activity>
     </application>
 
