@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,10 +19,18 @@ import com.midterm.lamnhom.databinding.ActivityKqtimKiemBinding;
 import com.midterm.lamnhom.model.KhaiBao;
 import com.midterm.lamnhom.model.LichSu;
 
+import java.util.ArrayList;
+
 public class KQTimKiem extends AppCompatActivity {
 
     private ActivityKqtimKiemBinding binding;
+
+    private FirebaseDatabase database;
     private  LichSu his;
+
+
+    private ArrayList<String> arrayList;
+    private ArrayAdapter<String> adapter;
 
 
     @Override
@@ -29,10 +40,11 @@ public class KQTimKiem extends AppCompatActivity {
         View view =binding.getRoot();
         setContentView(view);
 
+
         Intent ls = getIntent();
         // Không được thay đỏi dòng nay
         his = (LichSu) ls.getSerializableExtra("his");
-        binding.kqLsDiChuyen.setText( his.toString() );
+        //binding.kqLsDiChuyen.setText( his.toString() );
         binding.kqCCCD.setText(his.getCccd());
       //  binding.kqDcThuongTru.setText(his.getDiaDiem());
         binding.kqCCCD.setText( his.getCccd());
@@ -40,10 +52,13 @@ public class KQTimKiem extends AppCompatActivity {
         getKhaiBao( his.getCccd() );
 
 
-      /*  if ( khaiBao.isSex() )
-            binding.kqgtNam.isChecked() ;
-        else
-            binding.kqgtNu.isChecked();*/
+
+        arrayList = new ArrayList<String>();
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,arrayList);
+        binding.lvLichSu.setAdapter(adapter);
+
+        getAllListLichSuRealTimeDB( his.getCccd() );  // không di chuyển
+
 
     }
 
@@ -74,15 +89,45 @@ public class KQTimKiem extends AppCompatActivity {
                 }
 
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
 
+    }
 
 
+    private  void getAllListLichSuRealTimeDB( String cccd ){
+
+
+
+        database = FirebaseDatabase.getInstance();
+        arrayList.clear();
+
+        DatabaseReference  exe = database.getReference("listls");
+
+        exe.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for( DataSnapshot dataSnapshot :  snapshot.getChildren() ){
+                    String t = dataSnapshot.getKey();
+                    LichSu kb = new LichSu();
+                    kb = dataSnapshot.getValue( LichSu.class) ;
+
+                    if( kb.getCccd().equals( cccd) == true   ){
+                        arrayList.add(kb.toString());
+                    }
+
+                    adapter.notifyDataSetChanged();
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(KQTimKiem.this, "Loi", Toast.LENGTH_SHORT ).show();
+            }
+        });
 
     }
 }

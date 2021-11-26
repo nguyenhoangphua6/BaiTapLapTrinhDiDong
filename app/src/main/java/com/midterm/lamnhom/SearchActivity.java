@@ -79,9 +79,7 @@ public class SearchActivity extends AppCompatActivity {
                       listLichsu.add(kb);
                       adapter.notifyDataSetChanged();
                 }
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                  Toast.makeText(SearchActivity.this, "Loi Roi Ba Con Oi", Toast.LENGTH_SHORT ).show();

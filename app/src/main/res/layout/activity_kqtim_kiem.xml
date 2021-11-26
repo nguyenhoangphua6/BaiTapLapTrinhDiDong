@@ -102,19 +102,6 @@
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lịch sử di chuyển:"
-                android:textSize="15dp" />
-
-            <TextView
-                android:id="@+id/kq_lsDiChuyen"
-                android:layout_width="match_parent"
-                android:layout_height="156dp"
-                android:textSize="20dp" />
-
-            <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -127,13 +114,48 @@
                 android:layout_height="wrap_content"
                 android:text="Đã cam kết" />
 
-            <CheckBox
-                android:id="@+id/checkBox2"
+            <TextView
+                android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tôi cam kết các thông tin khai báo là đúng sự thật"
-                android:checked="true"
-                android:enabled="false" />
+                android:text="Lịch sử di chuyển:"
+                android:textSize="15dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="318dp">
+                <ListView
+                    android:id="@+id/lvLichSu"
+                    android:layout_width="409dp"
+                    android:layout_height="316dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0">
+
+
+                </ListView>
+
+                <RadioButton
+                    android:id="@+id/kq_ck"
+                    android:layout_width="198dp"
+                    android:layout_height="45dp"
+                    android:background="@color/teal_200"
+                    android:text="Đã cam kết khai báo y tế"
+                    app:layout_constraintCircleRadius="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.901" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 

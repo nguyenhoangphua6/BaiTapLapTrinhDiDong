@@ -21,7 +21,14 @@ public class LichSu implements Serializable {
     @NonNull
     @Override
     public String toString() {
-        String s = "Thời gian: " +thoiGian + ";\n" + "Địa điểm: " + diaDiem + ";\n" + "Phương tiện: " + phuongTien + ".";
+        String s = "------- \n" +
+                   "       Thời gian: " + thoiGian + ";\n" +
+                   "       Địa điểm : " + diaDiem + ";\n" +
+                   "       Phương tiện: " + phuongTien + ";\n" +
+                   "-------";
+
+
+           //     s = "Thời gian: " +thoiGian + ";\n" + "Địa điểm: " + diaDiem + ";\n" + "Phương tiện: " + phuongTien + ".";
         return s;
     }
 
