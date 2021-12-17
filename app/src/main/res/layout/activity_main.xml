@@ -213,7 +213,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="30dp"
+            android:layout_marginVertical="20dp"
             android:weightSum="9"
             android:background="#eee9e9">
 
@@ -223,6 +223,7 @@
                 android:orientation="vertical"
                 android:layout_weight="3">
                 <ImageView
+                    android:id="@+id/img_khai_bao_y_te"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:src="@drawable/khaibaoyte_image"/>
@@ -231,6 +232,7 @@
                     android:layout_height="wrap_content"
                     android:text="Khai báo y tế"
                     android:textSize="20sp"
+                    android:gravity="center"
                     android:textColor="@color/black"/>
             </LinearLayout>
 
@@ -240,15 +242,18 @@
                 android:orientation="vertical"
                 android:layout_weight="3">
                 <ImageView
+                    android:id="@+id/img_tim_cccd"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/cccd"/>
+                    android:src="@drawable/cccd"
+                    android:layout_gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tìm theo số CCCC"
+                    android:text="Truy vết"
                     android:textSize="20sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
             </LinearLayout>
 
             <LinearLayout
@@ -257,14 +262,16 @@
                 android:orientation="vertical"
                 android:layout_weight="3">
                 <ImageView
+                    android:id="@+id/imgTrieuChung"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/diachi"/>
+                    android:src="@drawable/fever"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tìm theo địa chỉ"
+                    android:text="Triệu chứng"
                     android:textSize="20sp"
+                    android:gravity="center"
                     android:textColor="@color/black"/>
             </LinearLayout>
 
@@ -286,13 +293,15 @@
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/namkhong"/>
+                    android:src="@drawable/covid19"
+                    android:id="@+id/imgChungMoi"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="5 không"
+                    android:text="Thông tin chủng covid mới"
                     android:textSize="20sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
             </LinearLayout>
 
             <LinearLayout
@@ -301,15 +310,17 @@
                 android:orientation="vertical"
                 android:layout_weight="3">
                 <ImageView
+                    android:id="@+id/covidinfor"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:src="@drawable/covid"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Thông tin về coviz"
+                    android:text="Thông tin về covid"
                     android:textSize="20sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
             </LinearLayout>
 
             <LinearLayout
@@ -317,16 +328,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="3">
+
                 <ImageView
+                    android:id="@+id/imgNamKhong"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/diachi"/>
+                    android:src="@drawable/namkhong"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tìm theo địa chỉ"
+                    android:text="5 không"
                     android:textSize="20sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -342,6 +356,7 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

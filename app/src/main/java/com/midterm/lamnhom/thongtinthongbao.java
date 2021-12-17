@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioButton;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -23,8 +24,8 @@ import java.util.Date;
 public class thongtinthongbao extends AppCompatActivity {
 
     EditText edname,edcccd,eddiachi,edsdt;
-    CheckBox cbnam,cbcamket;
-
+    CheckBox cbcamket;
+    RadioButton rbnam,rbnu;
     EditText eddiadiem,edthoigian,edphuongtien;
     Boolean gioitinh,camket, cket;
     String name,cccd,diachi,sdt,diadiem,thoigian,phuongtien;
@@ -41,7 +42,7 @@ public class thongtinthongbao extends AppCompatActivity {
         edcccd = findViewById(R.id.edcccd);
         eddiachi = findViewById(R.id.eddiachi);
         edsdt = findViewById(R.id.edsdt);
-        cbnam = findViewById(R.id.cbnam);
+        rbnam = findViewById(R.id.rbNam);
         cbcamket = findViewById(R.id.cbcamket);
 
         //xong phan khai bao
@@ -62,7 +63,7 @@ public class thongtinthongbao extends AppCompatActivity {
                 cccd= edcccd.getText().toString();
                 diachi=eddiachi.getText().toString();
                 sdt= edsdt.getText().toString();
-                if(cbnam.isChecked()){
+                if(rbnam.isChecked()){
                     gioitinh=true;
                 }
                 else {

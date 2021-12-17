@@ -98,7 +98,7 @@ public class KQTimKiem extends AppCompatActivity {
     }
 
 
-    private  void getAllListLichSuRealTimeDB( String cccd ){
+        private  void getAllListLichSuRealTimeDB( String cccd ){
 
 
 
@@ -122,6 +122,7 @@ public class KQTimKiem extends AppCompatActivity {
 
                     adapter.notifyDataSetChanged();
                 }
+
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

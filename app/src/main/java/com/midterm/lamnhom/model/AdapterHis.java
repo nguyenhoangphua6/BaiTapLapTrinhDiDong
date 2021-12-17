@@ -98,7 +98,7 @@ public class AdapterHis extends RecyclerView.Adapter< AdapterHis.ViewHolder> imp
                 else {
                     for(LichSu c : listSearch)
                     {
-                        if(c.getDiaDiem().toLowerCase().contains(charString.toLowerCase()))
+                        if(c.getDiaDiem().toLowerCase().contains(charString.toLowerCase()) || c.getCccd().toLowerCase().contains(charString.toLowerCase()))
                         {
                             listFiltered.add(c);
                         }

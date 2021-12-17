@@ -13,11 +13,13 @@
         android:theme="@style/Theme.LamNhom"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".MainActivity"
+            android:label="Thông tin về covid"
+            android:name=".model.NamKhongActivity"
             android:exported="true" />
         <activity
-            android:name=".thongtinthongbao"
-            android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,11 +27,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:label="Khai báo y tế"
+            android:name=".thongtinthongbao"
+            android:exported="true"></activity>
+        <activity
+            android:label="Kết quả truy vết"
             android:name=".KQTimKiem"
             android:exported="true" />
         <activity
+            android:label="Truy vết"
             android:name=".SearchActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

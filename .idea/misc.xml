@@ -18,6 +18,10 @@
         <entry key="app/src/main/res/layout/activity_khaibaothongtin.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_kqtim_kiem.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_nam_khong.xml" value="0.15081521739130435" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.15081521739130435" />
+        <entry key="app/src/main/res/layout/activity_thongtinthongbao.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_thongtinthongbao2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/cardhoso.xml" value="0.14583333333333334" />
       </map>
     </option>

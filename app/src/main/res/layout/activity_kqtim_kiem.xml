@@ -16,8 +16,9 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kết quả tra cứu"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Kết quả truy vết"
             android:textSize="35dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,14 +41,18 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:text="Họ và tên:"
+                android:layout_marginTop="-30dp"
                 android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tv_kqName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+
+                />
 
             <TextView
                 android:id="@+id/textView3"
@@ -66,13 +71,15 @@
                     android:id="@+id/kqgt_Nam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nam" />
+                    android:text="Nam"
+                    android:enabled="false"/>
 
                 <RadioButton
                     android:id="@+id/kqgt_Nu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nữ" />
+                    android:text="Nữ"
+                    android:enabled="false"/>
             </RadioGroup>
 
             <TextView
@@ -86,7 +93,8 @@
                 android:id="@+id/kq_CCCD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:enabled="false"/>
 
             <TextView
                 android:id="@+id/textView5"
@@ -99,7 +107,8 @@
                 android:id="@+id/kq_DcThuongTru"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:enabled="false"/>
 
             <TextView
                 android:id="@+id/textView10"
@@ -112,7 +121,8 @@
                 android:id="@+id/kq_camKet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Đã cam kết" />
+                android:text="Đã cam kết"
+                android:enabled="false"/>
 
             <TextView
                 android:id="@+id/textView9"
@@ -124,16 +134,19 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="318dp">
+
                 <ListView
                     android:id="@+id/lvLichSu"
-                    android:layout_width="409dp"
-                    android:layout_height="316dp"
+                    android:layout_width="362dp"
+                    android:layout_height="220dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="75dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0">
+                    app:layout_constraintVertical_bias="0.744">
 
 
                 </ListView>
@@ -142,13 +155,14 @@
                     android:id="@+id/kq_ck"
                     android:layout_width="198dp"
                     android:layout_height="45dp"
+                    android:layout_marginBottom="2dp"
                     android:background="@color/teal_200"
                     android:text="Đã cam kết khai báo y tế"
-                    app:layout_constraintCircleRadius="15dp"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintCircleRadius="15dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
